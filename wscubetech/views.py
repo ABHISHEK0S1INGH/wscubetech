@@ -1,5 +1,16 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from featured_book.models import featured_book
+
+def home(request):
+    books = featured_book.objects.all()
+    data = {
+        'featured_book': books,
+    }
+    
+    
+    return render(request, 'index.html', data)
+
 
 def aboutUS(request):
     return render(request,'about.html')
