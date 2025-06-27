@@ -24,4 +24,7 @@ urlpatterns = [
     path('courses/', views.course , name='course'),
     path('index/', views.home, name='index'),
     path('products/', views.products, name='products'),
+    path('cart/', views.cart, name='cart'),
+    path('userform/', views.userform, name='userform'),
+    path('userfeedback/', views.userfeedback, name='userfeedback'),
 ]
